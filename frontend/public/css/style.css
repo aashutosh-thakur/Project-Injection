@@ -1,0 +1,426 @@
+/* General Body & Typography */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* A more modern font */
+    margin: 0;
+    padding: 0;
+    background-color: #0A0A10; /* Very dark background, almost black */
+    color: #E0E0E0; /* Light grey for general text */
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal scroll from any overflow */
+    cursor: none; /* Hide default cursor to use SiRa */
+}
+body {
+    /* ... other existing styles ... */
+    cursor: none; /* This is the key to hide the default system cursor */
+}
+/* SiRa Cursor Dot */
+.sira-dot {
+    position: fixed;
+    pointer-events: none; /* This ensures clicks pass through the dot to elements underneath */
+    z-index: 9999; /* Keeps the dots on top of other content */
+    width: 10px;
+    height: 10px;
+    background-color: #007bff; /* Blue dot */
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none; /* Allows clicks to pass through */
+    z-index: 9999; /* Ensure it's on top */
+    transform: translate(-50%, -50%); /* Center the dot on the cursor */
+    transition: transform 0.1s ease-out, background-color 0.2s ease; /* Smooth movement and color change */
+    will-change: transform; /* Optimize for animation */
+}
+
+/* Container for main content */
+.container {
+    max-width: 1100px; /* Wider container for content */
+    margin: 20px auto;
+    background-color: transparent; /* No background, let body handle it */
+    padding: 30px;
+    border-radius: 8px;
+    /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); */ /* No box shadow on dark theme usually */
+}
+
+/* Header & Navigation */
+header {
+    background-color: #1A1A2E; /* Slightly lighter dark blue for header */
+    color: white;
+    padding: 15px 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* More pronounced shadow */
+}
+
+header nav {
+    max-width: 1100px; /* Match container width */
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #E0E0E0; /* Light grey for logo */
+}
+
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center; /* Align items vertically */
+}
+
+header nav ul li {
+    margin-left: 25px;
+}
+
+header nav ul li a {
+    color: #B0B0B0; /* Slightly desaturated white for links */
+    text-decoration: none;
+    font-weight: 600; /* Bolder for navigation */
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+    color: #007bff; /* Bright blue for hover/active */
+    border-bottom: 2px solid #007bff;
+}
+
+/* Special Button - All Courses (from screenshot) */
+.all-courses-btn {
+    background-color: #007bff; /* Blue background */
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    display: flex; /* For icon alignment */
+    align-items: center;
+    margin-right: 20px; /* Space from other nav items */
+}
+
+.all-courses-btn:hover {
+    background-color: #0056b3;
+}
+
+.all-courses-btn .icon {
+    margin-right: 8px; /* Space between icon and text */
+}
+
+/* Search Input (from screenshot) */
+.search-container {
+    margin-left: 20px;
+    position: relative;
+}
+
+.search-input {
+    background-color: #2A2A40; /* Darker input field */
+    border: 1px solid #444;
+    padding: 8px 15px;
+    padding-right: 40px; /* Space for search icon */
+    border-radius: 5px;
+    color: #E0E0E0;
+    font-size: 0.9em;
+    width: 180px; /* Adjust width as needed */
+}
+
+.search-input::placeholder {
+    color: #888;
+}
+
+.search-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+}
+
+/* Hero Section (Cyber Security) */
+#hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 0; /* More vertical padding */
+    min-height: 500px; /* Ensure enough height */
+}
+
+#hero-content {
+    flex: 1;
+    max-width: 50%; /* Adjust width of text content */
+    padding-right: 40px;
+}
+
+#hero h1 {
+    font-size: 3.5em; /* Larger, more impactful heading */
+    color: #007bff; /* Bright blue for main heading */
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+#hero p {
+    font-size: 1.1em;
+    color: #B0B0B0;
+    margin-bottom: 30px;
+}
+
+.get-started-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.get-started-btn:hover {
+    background-color: #0056b3;
+}
+
+#hero-image {
+    flex: 1;
+    max-width: 50%; /* Adjust width of image content */
+    text-align: right;
+}
+
+#hero-image img {
+    max-width: 100%;
+    height: auto;
+    filter: drop-shadow(0 0 15px rgba(0, 123, 255, 0.5)); /* Glowing effect for the image */
+}
+
+/* General Headings & Sections */
+h1, h2, h3 {
+    color: #007bff; /* Bright blue for section headings */
+    margin-bottom: 15px;
+    margin-top: 30px; /* Space above sections */
+}
+
+section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #1A1A2E; /* Dark background for content sections */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+section h3 {
+    color: #00BCD4; /* A slightly different blue for subheadings */
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+section p {
+    margin-bottom: 15px;
+    color: #B0B0B0; /* Light grey for section text */
+}
+
+/* About Us Specific Styles */
+.about-content {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 30px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.about-text {
+    flex: 2; /* Takes more space */
+    min-width: 300px; /* Ensures it doesn't get too narrow */
+}
+
+.about-image-placeholder {
+    flex: 1; /* Takes less space */
+    min-width: 200px; /* Ensures image placeholder has min width */
+    text-align: center;
+}
+
+.about-image-placeholder img {
+    border: 3px solid #007bff; /* Border around the image */
+    padding: 5px;
+}
+
+
+/* Contact Form */
+#contact-us {
+    background-color: #1A1A2E; /* Same dark background */
+}
+
+#contact-us h2 {
+    color: #007bff;
+}
+
+#contact-us label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #E0E0E0; /* Light text for labels */
+}
+
+#contact-us input[type="text"],
+#contact-us input[type="email"],
+#contact-us textarea {
+    background-color: #2A2A40; /* Darker input fields */
+    border: 1px solid #444;
+    color: #E0E0E0;
+    width: calc(100% - 22px); /* Adjusting for padding and border */
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+#contact-us textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+#contact-us button[type="submit"] {
+    background-color: #007bff; /* Consistent blue for buttons */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+#contact-us button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.output-box {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #2A2A40; /* Darker background for output boxes */
+    border: 1px solid #444;
+    border-radius: 4px;
+    min-height: 50px;
+    overflow-wrap: break-word;
+    color: #00BCD4; /* A standout color for messages */
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #444; /* Darker separator */
+    margin: 60px 0; /* More vertical space */
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    background-color: #1A1A2E; /* Consistent dark background */
+    color: #B0B0B0;
+    border-radius: 8px;
+    font-size: 0.9em;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Secondary Navigation */
+.secondary-nav {
+    background-color: #2A2A40; /* Slightly different dark shade */
+    padding: 10px 0;
+    box-shadow: inset 0 -2px 5px rgba(0, 0, 0, 0.2); /* Inner shadow for depth */
+}
+
+.secondary-nav ul {
+    max-width: 1100px;
+    margin: 0 auto;
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Center the links */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.secondary-nav ul li {
+    margin: 0 15px; /* Spacing between links */
+}
+
+.secondary-nav ul li a {
+    color: #B0B0B0;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.secondary-nav ul li a:hover,
+.secondary-nav ul li a.active {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    header nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    header nav ul {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 15px;
+    }
+    header nav ul li {
+        margin: 5px 0;
+        width: 100%;
+        text-align: center;
+    }
+    .all-courses-btn {
+        margin: 10px 0;
+    }
+    .search-container {
+        margin-left: 0;
+        width: 100%;
+    }
+    .search-input {
+        width: calc(100% - 30px);
+    }
+    #hero {
+        flex-direction: column;
+        text-align: center;
+    }
+    #hero-content, #hero-image {
+        max-width: 100%;
+        padding: 0;
+    }
+    #hero-image {
+        margin-top: 30px;
+    }
+    .secondary-nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    .secondary-nav ul li {
+        margin: 5px 0;
+    }
+    .about-content {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.5em;
+    }
+    #hero h1 {
+        font-size: 2.5em;
+    }
+    .get-started-btn {
+        font-size: 1em;
+        padding: 12px 20px;
+    }
+}
