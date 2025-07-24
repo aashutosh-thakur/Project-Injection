@@ -3,7 +3,7 @@
 A web security learning platform that helps developers understand and prevent modern web vulnerabilities through interactive demonstrations.
 
 ## 🌐 Live Demo
-Visit the live site: (https://aashutosh-thakur.github.io/Project-Injection/)
+Visit the live site: [Project-Injection](https://aashutosh-thakur.github.io/Project-Injection/)
 
 ## 🚀 Features
 - Interactive injection playground
