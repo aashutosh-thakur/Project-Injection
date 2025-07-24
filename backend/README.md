@@ -3,7 +3,7 @@
 A web security learning platform that helps developers understand and prevent modern web vulnerabilities through interactive demonstrations.
 
 ## 🌐 Live Demo
-#Due to GitHub, Backend Connectivity is not possible so the payload and the comments box is not working properly.
+Due to GitHub, Backend Connectivity is not possible so the payload and the comments box is not working properly.
 
 Visit the live site: [https://aashutosh-thakur.github.io/Project-Injection/](https://aashutosh-thakur.github.io/Project-Injection/)
 
