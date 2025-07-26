@@ -1,4 +1,4 @@
-# Project Injection
+# Project Injection (Taken Help from AI)
 
 A web security learning platform that helps developers understand and prevent modern web vulnerabilities through interactive demonstrations.
 
